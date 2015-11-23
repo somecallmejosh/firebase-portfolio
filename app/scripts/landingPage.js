@@ -2,6 +2,7 @@
 
 var lpContent = new Firebase('https://jkb-portfolio.firebaseio.com/landingPageContent');
 lpContent.on('value', function(snapshot) {
+  $('.bio-headline').text(snapshot.val().headline);
   $('.bio-pic').attr("src", snapshot.val().bioPic);
   $('.bio-content').text(snapshot.val().bio);
 }, function(errorObject) {

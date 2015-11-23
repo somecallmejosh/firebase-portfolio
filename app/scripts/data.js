@@ -15,8 +15,9 @@ fbRoot.set({
     gitHub: 'https://github.com/somecallmejosh'
   },
   landingPageContent: {
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas eum ut vitae, error odit perspiciatis amet fuga in est hic labore pariatur, debitis ex, incidunt facere voluptatem consequatur. Dignissimos!',
-    bioPic: 'http://placehold.it/350x350' 
+    headline: 'Professional Website Design & Development',
+    bio: 'From small brochure websites to large scale fantasy gaming applications for professional sporting organizations, I have helped solve a variety of web based problems over the last 12 years. Feel free to touch base to see how I can help you.',
+    bioPic: 'http://somecallmejosh.com/assets/images/landing/landing2x.jpg' 
   },
   portfolioItems: {
     item1: {
