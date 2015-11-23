@@ -1,1 +1,2 @@
-console.log('\'Allo \'Allo!');
+'use strict';
+// Coming soon, I guess.

@@ -1,9 +1,10 @@
+'use strict';
 // Get a reference to our posts
-var pItems = new Firebase("https://jkb-portfolio.firebaseio.com/portfolioItems");
+var pItems = new Firebase('https://jkb-portfolio.firebaseio.com/portfolioItems');
 
 // Retrieve new posts as they are added to our database
-pItems.on("child_added", function(snapshot, prevChildKey) {
+pItems.on('child_added', function(snapshot) {
   var newItem = snapshot.val();
-  console.log("Name: " + newItem.name);
-  console.log("Url: " + newItem.url);
+  console.log('Name: ' + newItem.name);
+  console.log('Url: ' + newItem.url);
 });
