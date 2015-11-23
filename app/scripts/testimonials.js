@@ -4,7 +4,7 @@ var tItems = new Firebase('https://jkb-portfolio.firebaseio.com/testimonials');
 // Retrieve new posts as they are added to our database
 tItems.on('child_added', function(snapshot) {
   var newTestimonial = snapshot.val();
-  console.log('Name: ' + newTestimonial.name);
-  console.log('Pic: ' + newTestimonial.pic);
-  console.log('Content: ' + newTestimonial.content);
+  $('<img src="' + newTestimonial.pic + '">').appendTo('.testimonial-items');
+  $('<p>' + newTestimonial.name + '</p>').appendTo('.testimonial-items');
+  $('<p>' + newTestimonial.content + '</p>').appendTo('.testimonial-items');
 });

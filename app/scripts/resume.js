@@ -9,4 +9,8 @@ rItems.on('child_added', function(snapshot) {
   console.log('Job Title: ' + newResumeItem.jobTitle);
   console.log('From: ' + newResumeItem.yearStart);
   console.log('To: ' + newResumeItem.yearEnd);
+
+  $('<h1><a href="' + newResumeItem.url + '" target="_blank">' + newResumeItem.name + '</a></h1>').appendTo('.resume-items');
+  $('<p>' + newResumeItem.jobTitle + '</p>').appendTo('.resume-items');
+  $('<p>' + newResumeItem.yearStart + ' – ' + newResumeItem.yearEnd + '</p>').appendTo('.resume-items');
 });
