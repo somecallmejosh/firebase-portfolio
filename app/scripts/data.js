@@ -14,6 +14,10 @@ fbRoot.set({
     linkedIn: 'https://www.linkedin.com/in/somecallmejosh',
     gitHub: 'https://github.com/somecallmejosh'
   },
+  landingPageContent: {
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas eum ut vitae, error odit perspiciatis amet fuga in est hic labore pariatur, debitis ex, incidunt facere voluptatem consequatur. Dignissimos!',
+    bioPic: 'http://placehold.it/350x350' 
+  },
   portfolioItems: {
     item1: {
       name: 'Groove Generator',
