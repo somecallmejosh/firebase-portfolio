@@ -22,18 +22,21 @@ fbRoot.set({
   portfolioItems: {
     item1: {
       name: 'Groove Generator',
+      pic: 'http://placehold.it/150x150',
       url: 'http://somecallmejosh.github.io/fatback-generator/',
       codeUrl: 'https://github.com/somecallmejosh/fatback-generator',
       description: 'This is a web app that was born out of a need to practice a seemingly infinite number of variations of what Gary Chaffee calls Fatback Grooves. These are duple meter grooves, in 4/4 time with the snare on 2 and 4. There are 29 cymbal patterns (hi-hat and ride) and 22 interchangeable one-beat bass drum and snare drum patterns.'
     },
     item2: {
       name: 'Drum Intro Quiz',
+      pic: 'http://placehold.it/150x150',
       url: 'http://somecallmejosh.github.io/quiz-app/',
       codeUrl: 'https://github.com/somecallmejosh/quiz-app',
       description: 'Javascript based audio quiz that scores a users correct and incorrect answers.'
     },
     item3: {
       name: 'Hot or Cold',
+      pic: 'http://placehold.it/150x150',
       url: 'http://somecallmejosh.github.io/hot-or-cold-starter/',
       codeUrl: 'https://github.com/somecallmejosh/hot-or-cold-starter',
       description: 'In this game, the computer will randomly select a number between 1 and 100. The player then tries to guess the number. The player gets feedback for each guess — hot if their guess was close, and cold if their guess was far off. Once the correct number is guessed, the player will be notified and given the option to start a new game.'
