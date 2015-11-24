@@ -11,3 +11,27 @@ $icon-font-path: '../fonts/';
 .bio {
   margin-top: 60px;
 }
+
+body {
+  background-color: #FAFAFA;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: #FFF;
+}
+
+.navbar-brand {
+  text-transform: uppercase
+}
+
+.thumbnail {
+  border-radius: 0;
+  border: none;
+}
+
+.well {
+  background-color: white;
+  border: none
+}

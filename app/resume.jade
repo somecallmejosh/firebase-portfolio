@@ -5,15 +5,21 @@ block link
 
 block content
   .row
-    .col-lg-12.resume
+    .col-lg-8.col-lg-offset-2.resume
       h1 Resume
       .resume-items
       .template.hidden
         .resume-template
-          p.lead Company Name
-          p.job-title Job Title
-          div
-            span.year-start 2005
-            span.separator
-            span.year-end 2009
-          a.btn.btn-default.btn-xs.link(href="http://www.something.com") View Company
+          .row
+            .col-lg-6
+              h3.company-name 
+                a.link(target="_blank")
+                  span.glyphicon.glyphicon-link
+              p.job-title Job Title
+              p
+                span.year-start 2005
+                span.separator &nbsp;- 
+                span.year-end 2009
+            .col-lg-6
+              p.snippet
+          hr

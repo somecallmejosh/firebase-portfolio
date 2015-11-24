@@ -1,12 +1,25 @@
 'use strict';
-// Get a reference to our posts
+// Get a reference to our portfolio items
 var pItems = new Firebase('https://jkb-portfolio.firebaseio.com/portfolioItems');
 
-// Retrieve new posts as they are added to our database
+// Prep template
+function displayResults(result, template){
+  template.appendTo($('.portfolio-items'));
+    var projectImage = result.pic,
+        projectSiteLink = result.url,
+        projectCodeLink = result.codeUrl,
+        projectDescription = result.description,
+        projectName = result.name;
+    template.find('.portfolio-image').attr("src", projectImage);
+    template.find('.project-name').text(projectName);
+    template.find('.description').text(projectDescription);
+    template.find('.project-link').attr("href", projectSiteLink);
+    template.find('.code-link').attr("href", projectCodeLink);
+}
+
+// Retrieve new portfolio items as they are added to our database
 pItems.on('child_added', function(snapshot) {
-  var newItem = snapshot.val();
-  $('<img src="' + newItem.pic + '" />').appendTo('.portfolio-items');
-  $('<h3><a href="' + newItem.url + '" target="_blank">' + newItem.name + '</a></h3>').appendTo('.portfolio-items');
-  $('<p>' + newItem.description + '</p>').appendTo('.portfolio-items');
-  $('<p><a class="btn btn-default" href="' + newItem.codeUrl + '" target="_blank">View Code</a></p>').appendTo('.portfolio-items');
+  var portfolioTemplate = $('.portfolio-template .portfolio-item').clone();
+  var newPortfolioItem = snapshot.val();
+  displayResults(newPortfolioItem, portfolioTemplate);
 });
