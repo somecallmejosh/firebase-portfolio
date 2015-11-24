@@ -3,7 +3,7 @@
 var pItems = new Firebase('https://jkb-portfolio.firebaseio.com/portfolioItems');
 
 // Prep template
-function displayResults(result, template){
+function displayPortfolioItems(result, template){
   template.appendTo($('.portfolio-items'));
     var projectImage = result.pic,
         projectSiteLink = result.url,
@@ -21,5 +21,5 @@ function displayResults(result, template){
 pItems.on('child_added', function(snapshot) {
   var portfolioTemplate = $('.portfolio-template .portfolio-item').clone();
   var newPortfolioItem = snapshot.val();
-  displayResults(newPortfolioItem, portfolioTemplate);
+  displayPortfolioItems(newPortfolioItem, portfolioTemplate);
 });

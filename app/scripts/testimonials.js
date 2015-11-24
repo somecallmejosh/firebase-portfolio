@@ -3,7 +3,7 @@
 var tItems = new Firebase('https://jkb-portfolio.firebaseio.com/testimonials');
 
 // Prep template
-function displayResults(result, template){
+function displayTestimonials(result, template){
   template.appendTo($('.testimonial-items'));
     var testimonialImage = result.pic,
         testimonialName = result.name,
@@ -21,5 +21,5 @@ function displayResults(result, template){
 tItems.on('child_added', function(snapshot) {
   var testimonialTemplate = $('.testimonial-template .testimonial-item').clone();
   var newTestimonialItem = snapshot.val();
-  displayResults(newTestimonialItem, testimonialTemplate);
+  displayTestimonials(newTestimonialItem, testimonialTemplate);
 });

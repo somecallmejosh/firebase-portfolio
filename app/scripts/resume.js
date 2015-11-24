@@ -3,7 +3,7 @@
 var rItems = new Firebase('https://jkb-portfolio.firebaseio.com/resume');
 
 // Prep template
-function displayResults(result, template){
+function displayResumeItems(result, template){
   template.appendTo($('.resume-items'));
     var displayName = result.name,
         jobTitle = result.jobTitle,
@@ -23,5 +23,5 @@ function displayResults(result, template){
 rItems.on('child_added', function(snapshot) {
   var resumeTemplate = $('.template .resume-template').clone();
   var newResumeItem = snapshot.val();
-  displayResults(newResumeItem, resumeTemplate);
+  displayResumeItems(newResumeItem, resumeTemplate);
 });
