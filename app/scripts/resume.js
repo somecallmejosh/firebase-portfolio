@@ -23,6 +23,5 @@ function displayResults(result, template){
 rItems.on('child_added', function(snapshot) {
   var resumeTemplate = $('.template .resume-template').clone();
   var newResumeItem = snapshot.val();
-  console.log(snapshot.val().url.length);
   displayResults(newResumeItem, resumeTemplate);
 });
